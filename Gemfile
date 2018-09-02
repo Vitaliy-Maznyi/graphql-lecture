@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'batch-loader'
+gem 'graphql'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.6'

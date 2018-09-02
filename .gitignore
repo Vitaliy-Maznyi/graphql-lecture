@@ -14,6 +14,7 @@
 log/*
 tmp/
 !/tmp/.keep
+app/graphql/*/.keep
 
 .byebug_history
 

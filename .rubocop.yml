@@ -41,7 +41,7 @@ Documentation:
 
 # Indent private/protected/public as deep as method definitions
 Layout/AccessModifierIndentation:
-  EnforcedStyle: outdent
+  EnforcedStyle: indent
   SupportedStyles:
     - outdent
     - indent
