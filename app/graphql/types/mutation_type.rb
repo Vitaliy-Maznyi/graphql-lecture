@@ -1,4 +1,4 @@
-module Types
-  class MutationType < Types::BaseObject
-  end
+Types::MutationType = GraphQL::ObjectType.define do
+  name 'Mutation'
+
 end
