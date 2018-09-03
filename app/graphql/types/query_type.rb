@@ -6,4 +6,6 @@ Types::QueryType = GraphQL::ObjectType.define do
 
   field :posts, function: Resolvers::GetPosts.new
   field :post, function: Resolvers::GetPost.new
+
+  field :post_comments, function: Resolvers::GetPostComments.new
 end

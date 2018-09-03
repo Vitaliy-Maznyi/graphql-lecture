@@ -1,6 +1,6 @@
 Types::UserType = GraphQL::ObjectType.define do
   name 'User'
-  description 'User record'
+  description 'User type'
 
   field :id, !types.ID
   field :first_name, types.String
