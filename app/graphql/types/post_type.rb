@@ -15,7 +15,7 @@ Types::PostType = GraphQL::ObjectType.define do
       end
     end
 
-  field :post_comments, Types::CommentType.to_list_type,
+  field :comments, Types::CommentType.to_list_type,
     resolve: ->(post, _args, _ctx) do
       BatchLoader.for(post.id).batch(default_value: []) do |post_ids, batch_loader|
         Comment.where(post_id: post_ids).each do |comment|
