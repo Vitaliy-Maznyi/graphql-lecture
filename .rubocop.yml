@@ -695,7 +695,7 @@ Metrics/AbcSize:
   Max: 25
 
 Metrics/BlockLength:
-  ExcludedMethods: ['describe', 'context']
+  ExcludedMethods: ['describe', 'context', 'define']
 
 Metrics/BlockNesting:
   Max: 3

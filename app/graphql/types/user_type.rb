@@ -20,4 +20,13 @@ Types::UserType = GraphQL::ObjectType.define do
         end
       end
     end
+
+  field :comments, Types::CommentType.to_list_type,
+    resolve: ->(user, _args, _ctx) do
+      BatchLoader.for(user.id).batch(default_value: []) do |user_ids, batch_loader|
+        Comment.where(user_id: user_ids).each do |comment|
+          batch_loader.call(comment.user_id) { |memo| memo << comment }
+        end
+      end
+    end
 end
