@@ -1,4 +1,4 @@
-Types::Input::UserUpdateInput = GraphQL::InputObjectType.define do
+Types::Input::User::UpdateInput = GraphQL::InputObjectType.define do
   name 'User_UpdateAttributes'
   description 'list of user attributes which can be updated'
 

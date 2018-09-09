@@ -1,4 +1,4 @@
-Types::Input::UserCreateInput = GraphQL::InputObjectType.define do
+Types::Input::User::CreateInput = GraphQL::InputObjectType.define do
   name 'User_CreateAttributes'
   description 'list of user attributes needed for creating user record'
 

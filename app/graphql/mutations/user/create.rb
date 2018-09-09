@@ -1,5 +1,5 @@
 class Mutations::User::Create < GraphQL::Function
-  argument :data, Types::Input::UserCreateInput
+  argument :data, Types::Input::User::CreateInput
 
   type Types::UserType
 
