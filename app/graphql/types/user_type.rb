@@ -5,6 +5,7 @@ Types::UserType = GraphQL::ObjectType.define do
   field :id, !types.ID
   field :first_name, types.String
   field :last_name, types.String
+  field :name, types.String, deprecation_reason: 'we have split up name into two'
   field :email, types.String
   field :phone_number, types.String
   field :full_name, types.String,

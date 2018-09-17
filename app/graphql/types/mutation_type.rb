@@ -1,6 +1,5 @@
 Types::MutationType = GraphQL::ObjectType.define do
   name 'Mutation'
-
   description 'list of all available mutations'
 
   field :create_user, function: Mutations::User::Create.new
