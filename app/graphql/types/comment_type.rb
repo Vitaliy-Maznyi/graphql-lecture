@@ -6,6 +6,7 @@ Types::CommentType = GraphQL::ObjectType.define do
   field :body, types.String
   field :commenter, Types::UserType,
     property: :user,
+    description: 'returns the author of the comment',
     resolve: ->(comment, _args, _ctx) do
       BatchLoader.for(comment.user_id).batch do |user_ids, batch_loader|
         User.where(id: user_ids).each do |user|
